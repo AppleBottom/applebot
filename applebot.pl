@@ -263,7 +263,7 @@ sub MAIN {
             if(not defined $wiki_synthesis) {
             
                 if(defined $bob_synthesis and $bob_synthesis < $ceebo_synthesis) {
-                    say BRIGHT_WHITE, $page_title, RESET, " has no synthesis on the wiki, but a ", BRIGHT_WHITE, $ceebo_synthesis, RESET, " glider synthesis in Bob Shemyakin's list.";
+                    say BRIGHT_WHITE, $page_title, RESET, " has no synthesis on the wiki, but a ", BRIGHT_WHITE, $bob_synthesis, RESET, " glider synthesis in Bob Shemyakin's list.";
                 } else {
                     say BRIGHT_WHITE, $page_title, RESET, " has no synthesis on the wiki, but a ", BRIGHT_WHITE, $ceebo_synthesis, RESET, " glider synthesis in Chris C.'s list.";
                 }
@@ -271,7 +271,7 @@ sub MAIN {
             # or is the wiki synthesis worse than Chris C.'s?
             } elsif($wiki_synthesis > $ceebo_synthesis or $wiki_synthesis > ($bob_synthesis // 0)) {
                 if(defined $bob_synthesis and $bob_synthesis < $ceebo_synthesis) {
-                    say BRIGHT_WHITE, $page_title, RESET, " has a ", BRIGHT_WHITE, $wiki_synthesis, RESET, " glider synthesis on the wiki, but a ", , BRIGHT_WHITE, $ceebo_synthesis, RESET, " glider synthesis in Bob Shemyakin's list.";
+                    say BRIGHT_WHITE, $page_title, RESET, " has a ", BRIGHT_WHITE, $wiki_synthesis, RESET, " glider synthesis on the wiki, but a ", , BRIGHT_WHITE, $bob_synthesis, RESET, " glider synthesis in Bob Shemyakin's list.";
                 } else {
                     say BRIGHT_WHITE, $page_title, RESET, " has a ", BRIGHT_WHITE, $wiki_synthesis, RESET, " glider synthesis on the wiki, but a ", , BRIGHT_WHITE, $ceebo_synthesis, RESET, " glider synthesis in Chris C.'s list.";
                 }
