@@ -1,4 +1,5 @@
-Starting up at [97mMon Jan  9 23:30:31 2017[0m.
+Howdy, this is [94mapplebot.pl[0m v[97m0.01[0m
+Starting up at [97mMon Jan  9 23:40:20 2017[0m.
 Reading Chris C.'s list... [32mdone[0m ([97m5721[0m lines read)
 Reading Bob Shemyakin's list... [32mdone[0m ([97m2435[0m lines read)
 Getting list of wiki pages... [32mdone[0m ([97m191[0m articles found)
@@ -229,7 +230,6 @@ Getting wikitext for Very^9 long boat... [32mdone[0m
 [97mLoop[0m has a [97m5[0m glider synthesis on the wiki, but a [97m4[0m glider synthesis in Chris C.'s list.
 [97mOrtho-loaf and table[0m has a [97m6[0m glider synthesis on the wiki, but a [97m5[0m glider synthesis in Chris C.'s list.
 [97mR-bee and snake[0m has a [97m7[0m glider synthesis on the wiki, but a [97m4[0m glider synthesis in Chris C.'s list.
-[97mScorpion[0m has a [97m4[0m glider synthesis on the wiki, but a [97m4[0m glider synthesis in Chris C.'s list.
 [97mSesquihat[0m has a [97m6[0m glider synthesis on the wiki, but a [97m5[0m glider synthesis in Chris C.'s list.
 [97mShip on long boat[0m has a [97m6[0m glider synthesis on the wiki, but a [97m5[0m glider synthesis in Chris C.'s list.
 [97mSkew R-bees[0m has no synthesis on the wiki, but a [97m5[0m glider synthesis in Chris C.'s list.
@@ -249,11 +249,10 @@ Getting wikitext for Very^9 long boat... [32mdone[0m
 [97mTub with cis-tail[0m has a [97m8[0m glider synthesis on the wiki, but a [97m4[0m glider synthesis in Chris C.'s list.
 [97mTub with long long tail[0m has a [97m7[0m glider synthesis on the wiki, but a [97m6[0m glider synthesis in Chris C.'s list.
 [97mTub with long tail[0m has a [97m5[0m glider synthesis on the wiki, but a [97m4[0m glider synthesis in Chris C.'s list.
-[97mUp wing on wing[0m has a [97m5[0m glider synthesis on the wiki, but a [97m5[0m glider synthesis in Chris C.'s list.
 [97mVery long integral[0m has a [97m9[0m glider synthesis on the wiki, but a [97m5[0m glider synthesis in Chris C.'s list.
 [97mVery very long barge[0m has no synthesis on the wiki, but a [97m4[0m glider synthesis in Chris C.'s list.
 [97mVery very long canoe[0m has a [97m7[0m glider synthesis on the wiki, but a [97m5[0m glider synthesis in Chris C.'s list.
 [97mVery very long ship[0m has no synthesis on the wiki, but a [97m5[0m glider synthesis in Chris C.'s list.
 [97mVery^3 long boat[0m has no synthesis on the wiki, but a [97m6[0m glider synthesis in Chris C.'s list.
 [97mVery^4 long boat[0m has no synthesis on the wiki, but a [97m7[0m glider synthesis in Chris C.'s list.
-Finished at [97mMon Jan  9 23:31:43 2017[0m.
+Finished at [97mMon Jan  9 23:41:32 2017[0m.

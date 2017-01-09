@@ -95,7 +95,9 @@ exit MAIN();
 sub MAIN {
 
     my $starting_time = time;
-
+    
+    # introduce ourselves
+    say "Howdy, this is ", BRIGHT_BLUE, $NAME, RESET, " v", BRIGHT_WHITE, $VERSION, RESET;
     say "Starting up at ", BRIGHT_WHITE, scalar localtime($starting_time), RESET, ".";
 
     # make sure Chris C's datafile exist.  We can live without Bob
@@ -269,7 +271,7 @@ sub MAIN {
                 }
             
             # or is the wiki synthesis worse than Chris C.'s?
-            } elsif($wiki_synthesis > $ceebo_synthesis or $wiki_synthesis > ($bob_synthesis // 0)) {
+            } elsif($wiki_synthesis > $ceebo_synthesis or $wiki_synthesis > ($bob_synthesis // 999999)) {
                 if(defined $bob_synthesis and $bob_synthesis < $ceebo_synthesis) {
                     say BRIGHT_WHITE, $page_title, RESET, " has a ", BRIGHT_WHITE, $wiki_synthesis, RESET, " glider synthesis on the wiki, but a ", , BRIGHT_WHITE, $bob_synthesis, RESET, " glider synthesis in Bob Shemyakin's list.";
                 } else {
@@ -292,6 +294,7 @@ sub MAIN {
         
     }
     
+    # say goodbye
     say "Finished at ", BRIGHT_WHITE, scalar localtime(time), RESET, ".";
     
     # success!
