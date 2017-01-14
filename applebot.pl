@@ -11,6 +11,7 @@ use utf8;		# script itself is in UTF-8
 
 # core modules
 use Getopt::Long;
+use List::Util		qw/min/;
 use Term::ANSIColor	qw/:constants/;
 
 # non-core modules
@@ -38,8 +39,13 @@ our $still_list_txt	= "still_list.txt";
 
 # filename for Bob Shemyakin's list; should be copied from
 # http://conwaylife.com/forums/viewtopic.php?p=39164#p39164 (or a later post
-# that contains an updated version.
+# that contains an updated version).
 our $bob_shemyakin_txt	= "bob_shemyakin.txt";
+
+# filename for Bob Shemyakin's 16-bit list; should be copied from
+# http://conwaylife.com/forums/viewtopic.php?p=39299#p39299 (or a later post
+# that contains an updated version).
+our $still16_txt	= "still16.txt";
 
 # category to fetch pages from; suggested values are "Strict still lifes" or
 # "Still lifes".
@@ -129,6 +135,12 @@ sub MAIN {
     
     say GREEN, "done", RESET, " (", BRIGHT_WHITE, (scalar @ceebo_lines), RESET, " lines read)";
     
+    # Bob Shemyakin does not list apgcodes, so we construct a temporary
+    # helper hash converting object numbers to codes.
+    my %number2code = map {
+        $objects->{$_}->{'number'} => $_
+    } keys %$objects;
+        
     # read Bob Shemyakin's list, if found
     if(-e $bob_shemyakin_txt) {
     
@@ -137,12 +149,6 @@ sub MAIN {
         
         # the first line is a header line; ignore that.
         shift @bob_lines;
-        
-        # Bob Shemyakin does not list apgcodes, so we construct a temporary
-        # helper hash converting object numbers to codes.
-        my %number2code = map {
-            $objects->{$_}->{'number'} => $_
-        } keys %$objects;
         
         # process Bob Shemyakin's list
         foreach my $bob_line (@bob_lines) {
@@ -160,6 +166,41 @@ sub MAIN {
             } else {
                 # this shouldn't happen.
                 warn "Could not identify object from Bob Shemyakin's list: $bob_line";
+            
+            }
+        }
+        
+        say GREEN, "done", RESET, " (", BRIGHT_WHITE, (scalar @bob_lines), RESET, " lines read)";
+    }
+    
+    # read Bob Shemyakin's still16.txt list, if found
+    if(-e $still16_txt) {
+    
+        print "Reading Bob Shemyakin's 16-bit list... ";
+        my @bob_lines = read_file($still16_txt);
+        
+        # the first line is a header line; ignore that.
+        shift @bob_lines;
+        
+        # process Bob Shemyakin's list
+        foreach my $bob_line (@bob_lines) {
+        
+            # split line into fields
+            my ($bits, $bits_number, $bob_gliders) = split /\s+/, $bob_line;
+            
+            # "999 gliders" indicates no synthesis.
+            next if $bob_gliders == 999;
+            
+            # this is the number we're interested in.
+            my $number = "${bits}.${bits_number}";
+            
+            if(exists $number2code{$number}) {
+                # we have an apgcode.
+                $objects->{$number2code{$number}}->{'bob2_synthesis'} = $bob_gliders;
+            
+            } else {
+                # this shouldn't happen.
+                warn "Could not identify object from Bob Shemyakin's still16.txt list: $bob_line";
             
             }
         }
@@ -256,31 +297,40 @@ sub MAIN {
         if(exists $objects->{$apgcode}->{'wiki_synthesis'} and exists $objects->{$apgcode}->{'ceebo_synthesis'}) {
         
             # extract synthesis counts, for convenience
-            my ($wiki_synthesis, $ceebo_synthesis, $bob_synthesis, $page_title) = 
+            my ($wiki, $ceebo, $bob, $bob2, $page_title) = 
                 map { 
                     $objects->{$apgcode}->{$_} 
-                } ("wiki_synthesis", "ceebo_synthesis", "bob_synthesis", "page_title");
+                } ("wiki_synthesis", "ceebo_synthesis", "bob_synthesis", "bob2_synthesis", "page_title");
                 
-            # is the object without a listed synthesis on the wiki?
-            if(not defined $wiki_synthesis) {
+            # best synthesis in Chris's and Bob's files
+            my $best = min ($ceebo // 999999, $bob // 999999, $bob2 // 999999);
             
-                if(defined $bob_synthesis and $bob_synthesis < $ceebo_synthesis) {
-                    say BRIGHT_WHITE, $page_title, RESET, " has no synthesis on the wiki, but a ", BRIGHT_WHITE, $bob_synthesis, RESET, " glider synthesis in Bob Shemyakin's list.";
-                } else {
-                    say BRIGHT_WHITE, $page_title, RESET, " has no synthesis on the wiki, but a ", BRIGHT_WHITE, $ceebo_synthesis, RESET, " glider synthesis in Chris C.'s list.";
-                }
+            # is the wiki synthesis suboptimal?
+            if(!defined $wiki or $best < $wiki) {
             
-            # or is the wiki synthesis worse than Chris C.'s?
-            } elsif($wiki_synthesis > $ceebo_synthesis or $wiki_synthesis > ($bob_synthesis // 999999)) {
-                if(defined $bob_synthesis and $bob_synthesis < $ceebo_synthesis) {
-                    say BRIGHT_WHITE, $page_title, RESET, " has a ", BRIGHT_WHITE, $wiki_synthesis, RESET, " glider synthesis on the wiki, but a ", , BRIGHT_WHITE, $bob_synthesis, RESET, " glider synthesis in Bob Shemyakin's list.";
-                } else {
-                    say BRIGHT_WHITE, $page_title, RESET, " has a ", BRIGHT_WHITE, $wiki_synthesis, RESET, " glider synthesis on the wiki, but a ", , BRIGHT_WHITE, $ceebo_synthesis, RESET, " glider synthesis in Chris C.'s list.";
-                }
+                # formatted values for prniting.
+                my $wiki_p  = (defined $wiki)  ? sprintf("%3d", $wiki ) : "  -";
+                my $ceebo_p = (defined $ceebo) ? sprintf("%3d", $ceebo) : "  -";
+                my $bob_p   = (defined $bob)   ? sprintf("%3d", $bob  ) : "  -";
+                my $bob2_p  = (defined $bob2)  ? sprintf("%3d", $bob2 ) : "  -";
             
-                
+                print $wiki_p;
+                print " | ";
+                print BOLD if ($ceebo // 999999) == $best;
+                print $ceebo_p;
+                print RESET;
+                print " | ";
+                print BOLD if ($bob   // 999999) == $best;
+                print $bob_p;
+                print RESET;
+                print " | ";
+                print BOLD if ($bob2  // 999999) == $best;
+                print $bob2_p;
+                print RESET;
+                print " | ";
+                say   $page_title;
             }
-        
+                
         }
             
     }
