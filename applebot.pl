@@ -286,6 +286,9 @@ sub MAIN {
         
     }
     
+    say "Wiki         | Chris        | Bob          | Bob (16 bit) | Pattern";
+    say "-------------+--------------+--------------+--------------+--------------";
+    
     # Find objects we could improve (sorted by page title, only taking into
     # account objects that are on the wiki in the first place).
     foreach my $apgcode (sort { $objects->{$a}->{'page_title'} cmp $objects->{$b}->{'page_title'} } grep { exists $objects->{$_}->{'page_title'} } keys %$objects) {
@@ -294,7 +297,7 @@ sub MAIN {
         # on the wiki (but the associated value may be undefined if no
         # glider synthesis count was extracted).  Same for Chris C.'s
         # synthesis.
-        if(exists $objects->{$apgcode}->{'wiki_synthesis'} and exists $objects->{$apgcode}->{'ceebo_synthesis'}) {
+        if(exists $objects->{$apgcode}->{'wiki_synthesis'}) {
         
             # extract synthesis counts, for convenience
             my ($wiki, $ceebo, $bob, $bob2, $page_title) = 
@@ -305,14 +308,17 @@ sub MAIN {
             # best synthesis in Chris's and Bob's files
             my $best = min ($ceebo // 999999, $bob // 999999, $bob2 // 999999);
             
+            # skip patterns not on any list.
+            next if $best == 999999;
+            
             # is the wiki synthesis suboptimal?
             if(!defined $wiki or $best < $wiki) {
             
                 # formatted values for prniting.
-                my $wiki_p  = (defined $wiki)  ? sprintf("%3d", $wiki ) : "  -";
-                my $ceebo_p = (defined $ceebo) ? sprintf("%3d", $ceebo) : "  -";
-                my $bob_p   = (defined $bob)   ? sprintf("%3d", $bob  ) : "  -";
-                my $bob2_p  = (defined $bob2)  ? sprintf("%3d", $bob2 ) : "  -";
+                my $wiki_p  = (defined $wiki)  ? sprintf("%12d", $wiki ) : "           -";
+                my $ceebo_p = (defined $ceebo) ? sprintf("%12d", $ceebo) : "           -";
+                my $bob_p   = (defined $bob)   ? sprintf("%12d", $bob  ) : "           -";
+                my $bob2_p  = (defined $bob2)  ? sprintf("%12d", $bob2 ) : "           -";
             
                 print $wiki_p;
                 print " | ";

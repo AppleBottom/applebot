@@ -1,5 +1,5 @@
 Howdy, this is [94mapplebot.pl[0m v[97m0.01[0m
-Starting up at [97mSat Jan 14 13:51:32 2017[0m.
+Starting up at [97mSat Jan 14 21:02:27 2017[0m.
 Reading Chris C.'s list... [32mdone[0m ([97m5721[0m lines read)
 Reading Bob Shemyakin's list... [32mdone[0m ([97m2435[0m lines read)
 Reading Bob Shemyakin's 16-bit list... [32mdone[0m ([97m3285[0m lines read)
@@ -195,65 +195,67 @@ Getting wikitext for Very^6 long boat... [32mdone[0m
 Getting wikitext for Very^7 long boat... [32mdone[0m
 Getting wikitext for Very^8 long boat... [32mdone[0m
 Getting wikitext for Very^9 long boat... [32mdone[0m
-  - | [1m  4[0m | [1m  4[0m |   -[0m | Beehive and cap
-  - | [1m  4[0m |   -[0m | [1m  4[0m | Beehive and dock
-  7 | [1m  5[0m | [1m  5[0m |   -[0m | Beehive at loaf
-  6 | [1m  5[0m | [1m  5[0m |   -[0m | Beehive with nine
-  9 | [1m  4[0m |   -[0m | [1m  4[0m | Bi-cap
-  4 | [1m  3[0m |   -[0m | [1m  3[0m | Bi-pond
-  5 | [1m  4[0m | [1m  4[0m |   -[0m | Boat with long tail
-  8 | [1m  7[0m | [1m  7[0m |   -[0m | Boat with very long tail
-  6 | [1m  5[0m | [1m  5[0m |   -[0m | Carrier siamese carrier
-  6 | [1m  4[0m | [1m  4[0m |   -[0m | Carrier siamese snake
-  6 | [1m  4[0m | [1m  4[0m |   -[0m | Carrier with feather
-  - | [1m  5[0m | [1m  5[0m |   -[0m | Cis-R-bee and R-loaf
-  5 | [1m  4[0m | [1m  4[0m |   -[0m | Cis-block and long hook
-  6 | [1m  5[0m | [1m  5[0m |   -[0m | Cis-boat with nine
-  8 | [1m  6[0m | [1m  6[0m |   -[0m | Cis-fuse with two tails
-  - | [1m  4[0m | [1m  4[0m |   -[0m | Cis-hook and R-bee
-  8 | [1m  5[0m | [1m  5[0m |   -[0m | Cis-hook with tail
-  7 | [1m  6[0m | [1m  6[0m |   -[0m | Cis-long boat with tail
-  - | [1m  6[0m | [1m  6[0m |   -[0m | Cis-rotated R-bee
-  - | [1m  4[0m | [1m  4[0m |   -[0m | Cis-rotated hook
-  - | [1m  4[0m | [1m  4[0m |   -[0m | Dock siamese carrier
-  8 | [1m  6[0m | [1m  6[0m |   -[0m | Eater head siamese snake
-  5 | [1m  4[0m | [1m  4[0m |   -[0m | Eater siamese eater
-  6 | [1m  5[0m | [1m  5[0m |   -[0m | Extra long snake
-  7 | [1m  6[0m | [1m  6[0m |   -[0m | Fuse with tail and long tail
- 11 | [1m  9[0m | [1m  9[0m |   -[0m | Honeycomb
-  5 | [1m  4[0m | [1m  4[0m |   -[0m | Integral with tub
-  9 | [1m  6[0m | [1m  6[0m |   -[0m | Loaf siamese barge
-  8 | [1m  4[0m | [1m  4[0m |   -[0m | Loaf siamese loaf
-  7 | [1m  6[0m | [1m  6[0m |   -[0m | Long long hook with tail
-  6 | [1m  4[0m | [1m  4[0m |   -[0m | Long long shillelagh
-  5 | [1m  4[0m | [1m  4[0m |   -[0m | Long long snake
-  6 | [1m  4[0m | [1m  4[0m |   -[0m | Long shillelagh
-  5 | [1m  4[0m | [1m  4[0m |   -[0m | Loop
-  6 | [1m  5[0m | [1m  5[0m |   -[0m | Ortho-loaf and table
-  7 | [1m  4[0m | [1m  4[0m |   -[0m | R-bee and snake
-  6 | [1m  5[0m | [1m  5[0m |   -[0m | Sesquihat
-  6 | [1m  5[0m | [1m  5[0m |   -[0m | Ship on long boat
-  - | [1m  5[0m | [1m  5[0m |   -[0m | Skew R-bees
-  9 | [1m  7[0m | [1m  7[0m |   -[0m | Snake bridge snake
-  6 | [1m  5[0m | [1m  5[0m |   -[0m | Snake siamese snake
-  6 | [1m  4[0m | [1m  4[0m |   -[0m | Snorkel loop
- 25 | [1m 14[0m | [1m 14[0m |   -[0m | Super mango
-  - | [1m  4[0m |   -[0m | [1m  4[0m | Symmetric scorpion
-  - | [1m  6[0m |   -[0m | [1m  6[0m | Table and dock
-  - | [1m  4[0m | [1m  4[0m |   -[0m | Trans-R-bee and R-loaf
-  5 | [1m  4[0m | [1m  4[0m |   -[0m | Trans-block and long hook
-  - | [1m  5[0m | [1m  5[0m |   -[0m | Trans-boat and dock
-  6 | [1m  4[0m | [1m  4[0m |   -[0m | Trans-boat and table
-  - | [1m  4[0m | [1m  4[0m |   -[0m | Trans-hook and R-bee
-  5 | [1m  4[0m | [1m  4[0m |   -[0m | Trans-long boat with tail
-  - | [1m  4[0m | [1m  4[0m |   -[0m | Trans-rotated R-bee
-  8 | [1m  4[0m | [1m  4[0m |   -[0m | Tub with cis-tail
-  7 | [1m  6[0m | [1m  6[0m |   -[0m | Tub with long long tail
-  5 | [1m  4[0m | [1m  4[0m |   -[0m | Tub with long tail
-  9 | [1m  5[0m | [1m  5[0m |   -[0m | Very long integral
-  - | [1m  4[0m | [1m  4[0m |   -[0m | Very very long barge
-  7 | [1m  5[0m | [1m  5[0m |   -[0m | Very very long canoe
-  - | [1m  5[0m | [1m  5[0m |   -[0m | Very very long ship
-  - | [1m  6[0m | [1m  6[0m |   -[0m | Very^3 long boat
-  - | [1m  7[0m | [1m  7[0m |   -[0m | Very^4 long boat
-Finished at [97mSat Jan 14 13:52:49 2017[0m.
+Wiki         | Chris        | Bob          | Bob (16 bit) | Pattern
+-------------+--------------+--------------+--------------+--------------
+           - | [1m           4[0m | [1m           4[0m |            -[0m | Beehive and cap
+           - | [1m           4[0m |            -[0m | [1m           4[0m | Beehive and dock
+           7 | [1m           5[0m | [1m           5[0m |            -[0m | Beehive at loaf
+           6 | [1m           5[0m | [1m           5[0m |            -[0m | Beehive with nine
+           9 | [1m           4[0m |            -[0m | [1m           4[0m | Bi-cap
+           4 | [1m           3[0m |            -[0m | [1m           3[0m | Bi-pond
+           5 | [1m           4[0m | [1m           4[0m |            -[0m | Boat with long tail
+           8 | [1m           7[0m | [1m           7[0m |            -[0m | Boat with very long tail
+           6 | [1m           5[0m | [1m           5[0m |            -[0m | Carrier siamese carrier
+           6 | [1m           4[0m | [1m           4[0m |            -[0m | Carrier siamese snake
+           6 | [1m           4[0m | [1m           4[0m |            -[0m | Carrier with feather
+           - | [1m           5[0m | [1m           5[0m |            -[0m | Cis-R-bee and R-loaf
+           5 | [1m           4[0m | [1m           4[0m |            -[0m | Cis-block and long hook
+           6 | [1m           5[0m | [1m           5[0m |            -[0m | Cis-boat with nine
+           8 | [1m           6[0m | [1m           6[0m |            -[0m | Cis-fuse with two tails
+           - | [1m           4[0m | [1m           4[0m |            -[0m | Cis-hook and R-bee
+           8 | [1m           5[0m | [1m           5[0m |            -[0m | Cis-hook with tail
+           7 | [1m           6[0m | [1m           6[0m |            -[0m | Cis-long boat with tail
+           - | [1m           6[0m | [1m           6[0m |            -[0m | Cis-rotated R-bee
+           - | [1m           4[0m | [1m           4[0m |            -[0m | Cis-rotated hook
+           - | [1m           4[0m | [1m           4[0m |            -[0m | Dock siamese carrier
+           8 | [1m           6[0m | [1m           6[0m |            -[0m | Eater head siamese snake
+           5 | [1m           4[0m | [1m           4[0m |            -[0m | Eater siamese eater
+           6 | [1m           5[0m | [1m           5[0m |            -[0m | Extra long snake
+           7 | [1m           6[0m | [1m           6[0m |            -[0m | Fuse with tail and long tail
+          11 | [1m           9[0m | [1m           9[0m |            -[0m | Honeycomb
+           5 | [1m           4[0m | [1m           4[0m |            -[0m | Integral with tub
+           9 | [1m           6[0m | [1m           6[0m |            -[0m | Loaf siamese barge
+           8 | [1m           4[0m | [1m           4[0m |            -[0m | Loaf siamese loaf
+           7 | [1m           6[0m | [1m           6[0m |            -[0m | Long long hook with tail
+           6 | [1m           4[0m | [1m           4[0m |            -[0m | Long long shillelagh
+           5 | [1m           4[0m | [1m           4[0m |            -[0m | Long long snake
+           6 | [1m           4[0m | [1m           4[0m |            -[0m | Long shillelagh
+           5 | [1m           4[0m | [1m           4[0m |            -[0m | Loop
+           6 | [1m           5[0m | [1m           5[0m |            -[0m | Ortho-loaf and table
+           7 | [1m           4[0m | [1m           4[0m |            -[0m | R-bee and snake
+           6 | [1m           5[0m | [1m           5[0m |            -[0m | Sesquihat
+           6 | [1m           5[0m | [1m           5[0m |            -[0m | Ship on long boat
+           - | [1m           5[0m | [1m           5[0m |            -[0m | Skew R-bees
+           9 | [1m           7[0m | [1m           7[0m |            -[0m | Snake bridge snake
+           6 | [1m           5[0m | [1m           5[0m |            -[0m | Snake siamese snake
+           6 | [1m           4[0m | [1m           4[0m |            -[0m | Snorkel loop
+          25 | [1m          14[0m | [1m          14[0m |            -[0m | Super mango
+           - | [1m           4[0m |            -[0m | [1m           4[0m | Symmetric scorpion
+           - | [1m           6[0m |            -[0m | [1m           6[0m | Table and dock
+           - | [1m           4[0m | [1m           4[0m |            -[0m | Trans-R-bee and R-loaf
+           5 | [1m           4[0m | [1m           4[0m |            -[0m | Trans-block and long hook
+           - | [1m           5[0m | [1m           5[0m |            -[0m | Trans-boat and dock
+           6 | [1m           4[0m | [1m           4[0m |            -[0m | Trans-boat and table
+           - | [1m           4[0m | [1m           4[0m |            -[0m | Trans-hook and R-bee
+           5 | [1m           4[0m | [1m           4[0m |            -[0m | Trans-long boat with tail
+           - | [1m           4[0m | [1m           4[0m |            -[0m | Trans-rotated R-bee
+           8 | [1m           4[0m | [1m           4[0m |            -[0m | Tub with cis-tail
+           7 | [1m           6[0m | [1m           6[0m |            -[0m | Tub with long long tail
+           5 | [1m           4[0m | [1m           4[0m |            -[0m | Tub with long tail
+           9 | [1m           5[0m | [1m           5[0m |            -[0m | Very long integral
+           - | [1m           4[0m | [1m           4[0m |            -[0m | Very very long barge
+           7 | [1m           5[0m | [1m           5[0m |            -[0m | Very very long canoe
+           - | [1m           5[0m | [1m           5[0m |            -[0m | Very very long ship
+           - | [1m           6[0m | [1m           6[0m |            -[0m | Very^3 long boat
+           - | [1m           7[0m | [1m           7[0m |            -[0m | Very^4 long boat
+Finished at [97mSat Jan 14 21:03:56 2017[0m.
